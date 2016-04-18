@@ -19,13 +19,13 @@ class BST
       if current_node.left.nil?
         current_node.left = Node.new(new_value)
       else
-        add_child(new_value, @root.left)
+        add_child(new_value, current_node.left)
       end
     elsif current_node.value < new_value
       if current_node.right.nil?
         current_node.right = Node.new(new_value)
       else
-        add_child(new_value, @root.right)
+        add_child(new_value, current_node.right)
       end
     else 
       puts "This value is already present here, I'm afraid. Cannot add to tree."
